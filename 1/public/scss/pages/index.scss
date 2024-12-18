@@ -1,0 +1,52 @@
+@import "../components/_reset.scss";
+@import "../components/_container.scss";
+@import "../components/text.scss";
+@import "../components/_footer.scss";
+@import "../components/_form.scss";
+@import "../components/_header.scss";
+@import "../components/_slider.scss";
+@import "../components/main-section.scss";
+@import "../components/_product-card.scss";
+@import "../components/_categories.scss";
+@import "../components/_advantages.scss";
+@import "../components/_partners.scss";
+@import "../components/_slider-partners.scss";
+@import "../components/_accordion.scss";
+@import "../components/_burger-menu.scss";
+
+// @import "../components/_container.scss";
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/public/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+html {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+body {
+    min-height: 100vh !important;
+    font-family: "Roboto", sans-serif; /* Добавили резервный шрифт */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.blocked {
+        overflow: hidden;
+    }
+}
+
+
+
+.section {
+    display: flex;
+    justify-content: center;
+
+}
+
+* {
+    // outline: 1px solid green;
+}

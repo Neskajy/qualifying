@@ -1,0 +1,115 @@
+@import "_buttons.scss";
+.header {
+    width: 100%;
+    padding: 30px 0px;
+    z-index: 21;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include container(1300px);
+
+
+        .consultation {
+            @include button1(8px, 10px);
+            width: fit-content;
+        }
+        .accordions {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            .accordion.contacts {
+                .accordion-wrapper {
+                    gap: 30px;
+                    .number, .mail, .location {
+                        img {
+                            width: 20px;
+                        }
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+            }
+            
+        }
+
+        .logo {
+            z-index: 21;
+            width: 30px;
+        }
+        .logoCopy {
+            z-index: 21;
+            width: 30px;
+            display: none;
+        }
+
+        .right, .rightBurger {
+            .information {
+                display: flex;
+                gap: 40px;
+                .delivery, .warranty {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    img {
+                        width: 20px;
+                        aspect-ratio: 1/1;
+                    }
+                }
+            }
+        }
+        
+        .burger-button {
+            display: none;
+        }
+
+        
+        .left, .right {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        @media (max-width: 1024px) {
+            gap: 10px;
+            .logoCopy {
+                display: block;
+            }
+            .burger-button {
+                display: flex;
+            }
+            .left {
+                display: none;
+            }
+            .right {
+                // display: none;
+                // justify-content: flex-end;
+                // flex: 1;
+                .information {
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            gap: 10px;
+            .logo {
+                display: none;
+            }
+            .burger-button {
+                display: flex;
+            }
+            .left {
+                .accordions {
+                    display: none;
+                }
+            }
+            .right {
+                display: none;
+                // justify-content: flex-end;
+                // flex: 1;
+                .information {
+                }
+            }
+        }
+    }
+}

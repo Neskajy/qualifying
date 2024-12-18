@@ -1,0 +1,54 @@
+@import "../components/container.scss";
+
+.catalog {
+    width: 100%;
+}
+
+.offers {
+    display: flex;
+    .filters {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @media (max-width: 700px) {
+            flex-direction: row;
+            width: 100%;
+            gap: 80px;
+        }
+        .categories-filter, .price-filter, .discount-filter {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .price-filter {
+            
+            .minimum, .maximum {
+                width: 90%;
+                background: white;
+                padding: 4px;
+                box-shadow: 0px 0px 8px 0px rgba(30, 15, 15, 0.35);
+            }
+        }
+
+        .minumum, .maximum {
+            width: 10px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.categories-cards
+{  
+    width: 70%;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-gap: 10px;
+}
+

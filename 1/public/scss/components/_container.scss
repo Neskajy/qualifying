@@ -1,0 +1,7 @@
+@mixin container($width: 1350px) {
+    width: $width;
+
+    @media (max-width: 1349px) {
+        width: 95%;
+    }
+}

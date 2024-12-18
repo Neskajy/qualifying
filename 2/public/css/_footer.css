@@ -1,0 +1,106 @@
+.footer {
+    margin-top: 300px;
+    border-top: 1px dashed #a6a6a6;
+    padding-top: 50px;
+    padding-bottom: 25px;
+
+    width: 100%;
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        .columns {
+            width: 100%;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            align-items: flex-start;
+
+            @media (max-width: 700px) {
+                grid-template-columns: 45% 45%;
+            }
+
+
+            .contacts, .work-time, .pages, .dataMenu {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 15px;
+            }
+
+            .work-time {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .contacts {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            .pages {
+                text-align: end;
+            }
+            
+            .dataMenu {
+                a {
+                    text-align: end;
+                }
+            }
+
+            @media (max-width: 700px) {
+                .pages {
+                    text-align: start;
+                }
+                .dataMenu {
+                    a {
+                        text-align: start;
+                    }
+                }
+            }
+
+        }
+
+        .bottom__information {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px
+            }
+            .social-media {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                a {
+                    aspect-ratio: 1 / 1;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 20px;
+                        aspect-ratio: 1 / 1;
+                    }
+                    border: 2px solid black;
+                    border-radius: 6px;
+                }
+            }
+            .privacy-policy {
+                a {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

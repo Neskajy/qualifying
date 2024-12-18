@@ -1,0 +1,86 @@
+@import "_buttons.scss";
+
+.card {
+    border-radius: 8px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    background: white;
+    display: flex;
+    border: 2px solid rgba(34, 60, 80, 0.1);
+    transition: .2s ease-in-out all;
+    @media (max-width: 540px) {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    &:hover {
+        border: none;
+        transition: .2s ease-in-out all;
+        border: 2px solid transparent;
+        box-shadow: 0px 4px 24px 0px rgba(34, 60, 80, 0.15);
+    }
+    
+    // align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    // justify-content: flex-start;
+
+    .image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .product {
+        height: 176px;
+        object-fit: contain;
+    }
+    .information {
+        @media (max-width: 540px) {
+            height: 150px;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        width: 100%;
+        margin: 13px 0px;
+        .rating {
+            display: flex;
+            gap: 4px;
+        }
+        .description {
+            display: block;
+            // width: 216px;
+            font-size: 14px;
+            word-break: break-all;
+            line-height: 1.1;
+            white-space: normal;
+            text-wrap: wrap;
+        }
+        .price {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            .discount {
+                font-weight: 700;
+                white-space: nowrap;
+            }
+            .actualPrice {
+                white-space: nowrap;
+                color: #646464;
+                font-weight: 500;
+                font-size: 12px;
+                text-decoration: line-through;
+            }
+        }
+    }
+    .details {
+        @include button1($border-radius: 8px);
+    }
+
+
+}

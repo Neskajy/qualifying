@@ -1,0 +1,15 @@
+@mixin button1($border-radius: 0px, $padding: 8px 0px, $width: fit-content) { // $border-radius теперь имеет значение по умолчанию 4px
+    width: $width;
+    background: black;
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    padding: $padding;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: .2s ease-in-out all;
+    &:hover {
+        box-shadow: 0px 0px 12px 0px rgba(30, 15, 15, 0.15);
+        transition: .2s ease-in-out all;
+    }
+}

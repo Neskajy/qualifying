@@ -1,0 +1,35 @@
+.accordion-sites {
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out 0.05s, visibility 0.2s ease-in-out 0.05s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s, -webkit-transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s;
+    position: relative;
+    .pre-information {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        h4 {
+            font-weight: 600;
+        }
+        
+        img {
+            transition: .6s all ease-in-out;
+        }
+    }
+    .accordion-wrapper {
+        position: absolute;
+        top: 30px;
+        background: white;
+        border: 1px solid rgba(231, 231, 233, 0.5);
+        box-shadow: 0px 15px 50px 0px rgba(27, 32, 50, 0.1);
+        border-radius: 4px;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 10;
+        transition: opacity 0.2s ease-in-out 0.05s, visibility 0.2s ease-in-out 0.05s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s, -webkit-transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s;
+    }
+    &.active {
+        overflow: visible;
+    }
+}

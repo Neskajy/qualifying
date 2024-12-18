@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TelShop</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="shortcut icon" href="public/media/logo/logo.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="basketButton" id="openBasketModal">
+        <img src="public/media/icons/basket.svg" alt="">
+    </div>
+
+    <div class="basketModal" id="basketModal">
+        <h2>Корзина</h2>
+
+        <div class="addedCards" id="addedCards">
+            
+        </div>
+
+        <div class="results">
+            <div class="totalProducts">
+                <span>Выбрано товаров на:</span>
+                <span class="productTotal" id="productTotal">0 ₽</span>
+            </div>
+    
+            <div class="buttons">
+                <button class="btn design">Оформить заказ</button>
+            </div>
+        </div>
+
+    </div>
+
+    <header class="header section">
+        <div class="container">
+            <img src="public/media/logo/logo.svg" class="logoCopy">
+            <div class="left">
+                <img src="public/media/logo/logo.svg" class="logo">
+            </div>
+            <div class="right">
+                <div class="information">
+                </div>
+                <form class="search" id="searchForm">
+                    <input type="text" placeholder="Поиск" id="searchInput">
+                    <button type="submit"><img src="public/media/icons/search.svg" alt=""></button>
+                </form>
+                <!-- <button class="consultation btn v2">Запросить консультацию</button> -->
+            </div>
+            <div class="burger-button">
+                <div class="inner">
+                    <span class="top"></span>
+                    <span class="center"></span>
+                    <span class="bottom"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="burger-window">
+        <div class="container">
+            <nav class="burger__nav">
+                <ul class="nav__list">
+                    <li>
+                        <a>Главная</a>
+                    </li>
+                    <li>
+                        <a>Корзина</a>
+                    </li>
+                    <li>
+                        <a>Контакты</a>
+                    </li>
+                </ul>
+                <div class="rightBurger">
+                    <div class="information">
+                    </div>
+                    <button class="consultation btn v1">Запросить консультацию</button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <form class="searchModal">
+        <input type="text" placeholder="Поиск">
+        <button class="btnSearch"><span>Найти</span></button>
+        <span class="closeSearch"><img src="public/media/icons/close.svg" alt=""></span>
+    </form>
+
+    <main class="main">
+        <div class="container">
+            <div class="offers">
+                <div class="filters">
+                    <ul class="manufacturer">
+                        <h4>Производители</h4>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="Apple" data-filter-category="manufacturer">
+                            <p>Apple</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="Samsung" data-filter-category="manufacturer">
+                            <p>Samsung</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="Xiaomi" data-filter-category="manufacturer">
+                            <p>Xiaomi</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="Huawei" data-filter-category="manufacturer">
+                            <p>Huawei</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="POCO" data-filter-category="manufacturer">
+                            <p>POCO</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="DEXP" data-filter-category="manufacturer">
+                            <p>DEXP</p>
+                        </li>
+                    </ul>
+                    <form action="" class="price-filter">
+                        <label for="min-price">Мин. цена:</label>
+                        <input type="number" id="min-price" class="minimum" value="0" data-filter-category="minPrice">
+                        <label for="max-price">Макс. цена:</label>
+                        <input type="number" id="max-price" class="maximum" value="99999" data-filter-category="maxPrice">
+                    </form>
+                    <ul class="Memory">
+                        <h4>Объем встроенной памяти</h4>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="8" data-filter-category="storage">
+                            <p>8ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="16" data-filter-category="storage">
+                            <p>16ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="32" data-filter-category="storage">
+                            <p>32ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="64" data-filter-category="storage">
+                            <p>64ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="128" data-filter-category="storage">
+                            <p>128ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="256" data-filter-category="storage">
+                            <p>256ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="512" data-filter-category="storage">
+                            <p>512ГБ</p>
+                        </li>
+                    </ul>
+                    <ul class="RAM">
+                        <h4>Объем оперативной памяти</h4>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="1" data-filter-category="ram">
+                            <p>1ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="1" data-filter-category="ram">
+                            <p>2ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="4" data-filter-category="ram">
+                            <p>4ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="6" data-filter-category="ram">
+                            <p>6ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="8" data-filter-category="ram">
+                            <p>8ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="12" data-filter-category="ram">
+                            <p>12ГБ</p>
+                        </li>
+                        <li class="choise">
+                            <input type="checkbox" class="checkbox" value="16" data-filter-category="ram">
+                            <p>16ГБ</p>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <form type="submit" id="FILTER">
+                            <button class="details" type="submit" id="getCardsFromFiltersButton">Показать</button>
+                        </form>
+                        <form type="submit" id="RESET">
+                            <button class="btn reset" type="submit" id="resetFiltersButton">Сбросить</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="products sectionMain">
+            </div>
+                <div class="products-cards" id="products-cards">
+                    
+                </div>
+            </div>
+    </main>
+
+    <footer class="footer section">
+        <div class="container">
+            <div class="logo">
+                <img src="public/media/logo/logo.svg" class="logo">
+            </div>
+            <div class="columns">
+                <div class="contacts">
+                    <div class="number">
+                        +7 (800) 555-35-35
+                    </div>
+                    <div class="mail">
+                        TelShop@gmail.com
+                    </div>
+                </div>
+                <div class="work-time">
+                    <p>Пн - Пт 8:00 до 22:00</p>
+                    <p>Сб - Вс 8:00 до 20:00</p>
+                </div>
+                <div class="pages">
+                    <a class="page">Главная</a>
+                    <a class="page">Контактная информация</a>
+                    <a class="page">Каталог</a>
+                </div>
+                <div class="dataMenu">
+                    <a class="delivery">Доставка и оплата</a>
+                    <a class="about">О компании</a>
+                    <a  class="contacts">Контакты</a>
+                </div>
+            </div>
+            <div class="bottom__information">
+                <div class="copyright">
+                    <p>© 2024, TelShop. Все права защищены</p>
+                </div>
+                <div class="privacy-policy">
+                    <p>Ознакомьтесь с нашей Политикой конфиденциальности</a>.</p>
+                </div>
+                <div class="social-media">
+                    <a href="https://telegram.org" target="_blank">
+                        <img alt="" class="telegram" src="public/media/icons/telegram.svg">
+                    </a>
+                    <a href="https://whatsapp.com" target="_blank">
+                        <img alt="" class="whatsapp" src="public/media/icons/whatsapp.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="public/js/burger.js"></script>
+    <script src="public/js/filters.js"></script>
+    <script src="public/js/basketModal.js"></script>
+</body>
+</html>

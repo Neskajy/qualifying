@@ -1,0 +1,84 @@
+button {
+    white-space: nowrap;
+}
+
+.btn.v1 {
+    background: black;
+    color: white;
+    font-weight: 700;
+    /* border-radius: 8px; */
+    height: 40px;
+    cursor: pointer;
+}
+.btn.v2 {
+    background: black;
+    cursor: pointer;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 4px;
+}
+
+.btnSearch {
+    height: 4dvi;
+    min-height: 30px;
+    aspect-ratio: 3 / 1;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    background: orangered;
+}
+
+.details {
+    background: orangered;
+    width: 100px;
+    padding: 10px 20px !important;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.reset {
+    background: transparent;
+    padding: 10px 20px !important;
+    width: 100px;
+    color: black;
+    border: 1px solid black;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn.reset.v2 {
+    background: transparent;
+    padding: 10px 20px !important;
+    width: fit-content;
+    color: black;
+    border: 1px solid black;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.btn.design {
+    background: rgb(47, 184, 29);
+    width: 150px;
+    padding: 10px 20px !important;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.remove {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+}

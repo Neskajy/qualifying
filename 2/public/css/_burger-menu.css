@@ -1,0 +1,160 @@
+
+.burger-button {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 2.8125rem;
+    aspect-ratio: 1 / 1;
+    height: 2.8125rem;
+    z-index: 21;
+    transition: 0.3s ease-in-out all;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: center;
+    .inner {
+        position: relative;
+        width: 20px;
+        height: 12px;
+        gap: 3px;
+
+        .center, .bottom, .top {
+            transition: 0.3s ease-in-out all;
+            background: black;
+            border: 1px solid black;
+        }
+        .center {
+            width: 13px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+        .top {
+
+            width: 20px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .bottom {
+
+            width: 7px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+.burger-button.active {
+    .inner .center {
+        transform: scale(0);
+    }
+    .inner .bottom {
+        width: 20px;
+        transform: rotate(-45deg) translateY(50%);
+        bottom: 50%;
+    }
+    .inner .top {
+        transform: rotate(45deg )translateY(-50%);
+        top: 50%;
+    }
+}
+
+.burger-button.active {
+    display: flex;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 20 !important;
+
+    animation: .8s ease burger__window__end;
+}
+
+@import "container.scss";
+
+.burger-window {
+    z-index: -999;
+    width: 100vw;
+    height: 100vh;
+    transition: .8s ease opacity;
+    
+    
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    padding-top: 7rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    height: 100vh;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, .8);
+    &.active {
+        z-index: 10 !important;
+    }
+    .container {
+        height: 100%;
+        position: relative;
+        .burger__nav {
+            .nav__list {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                li {
+                    a {
+                        width: fit-content;
+                        font-weight: 400;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .rightBurger {
+                width: 100%;
+                position: absolute;
+                bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .information {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .consultation {
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .burger-window {
+        display: flex;
+    }
+}
+@keyframes burger__window {
+    0% {opacity: 0;width: 0%;}
+    60% {opacity: .8}
+    100% {opacity: 1;width: 100%;}
+}
+.burger-window.active {
+    display: flex;
+    opacity: 1;
+    overflow: hidden;
+    transition: .8s ease opacity;
+    visibility: visible;
+
+    animation: .8s ease burger__window__end;
+}

@@ -1,0 +1,90 @@
+@import "_buttons.scss";
+
+.bid {
+    width: 100%;
+    margin-top: 200px;
+    height: 200px;
+    background: #d6d6d6;
+    @media (max-width: 480px) {
+        background: none;
+        min-height: 200px;
+        margin-top: 150px;
+    }
+    .container {
+        @include container(1300px);
+        position: relative;
+        .modal {
+            padding: 40px;
+            background: white;
+            position: absolute;
+            top: -50%;
+            transform: translateX(-50%)
+            translateY(-5%);
+            box-shadow: 0px 0px 12px 0px rgba(30, 15, 15, 0.15);
+            width: 70%;
+            left: 50%;
+            height: 450px;
+            border-radius: 12px;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+
+            @media (max-width: 680px) {
+                align-items: flex-start;
+                height: fit-content;
+                // position: static;
+                padding: 20px;
+                flex-direction: column;
+                .form {
+                    width: 100% !important;
+                }
+            }
+
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            .information {
+                h2 {
+                    font-size: 32px;
+                    font-weight: 900;
+                    padding: 0;
+                }
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                .number, .mail, .location, .work-time {
+                    img {
+                        width: 20px;
+                    }
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 50%;
+
+                
+
+                input {
+                    font-size: 16px;
+                    padding: 10px 10px;
+                    width: 100%;
+                    background: #d6d6d6;
+                }
+
+                .send {
+                    @include button1;
+                }
+            }
+        }
+    }
+}

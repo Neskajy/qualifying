@@ -1,0 +1,55 @@
+@import url(_reset.css);
+@import url(_section.css);
+@import url(_container.css);
+@import url(_text.css);
+@import url(_footer.css);
+@import url(_header.css);
+@import url(_accordion.css);
+@import url(_burger-menu.css);
+@import url(_button.css);
+@import url(_search.css);
+@import url(_categories.css);
+@import url(_main.css);
+@import url(_product-card.css);
+@import url(_basket.css);
+@import url(_modal.css);
+
+
+body {
+    &.blocked {
+        overflow: hidden;
+        padding-right: 17px;
+        /* &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            z-index: 20;
+            right: 0;
+            filter: blur(5px);
+            width: 100vw;
+            height: 100vh;
+        } */
+    }
+
+    &.smooth {
+        overflow: hidden;
+        padding-right: 17px;
+        &::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            z-index: 20;
+            right: 0;
+            z-index: 10;
+            background: rgba(0, 0, 0, .8);
+            cursor: pointer;
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+
+}
+
+* {
+    box-sizing: border-box;
+}

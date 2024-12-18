@@ -1,0 +1,33 @@
+.searchModal {
+    display: none !important;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 150px;
+    background: white;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+        height: 100%;
+        width: 60%;
+    }
+    .closeSearch {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 50px; */
+        aspect-ratio: 1 / 1;
+        margin-left: 30px;
+        img {
+            width: 16px;
+            aspect-ratio: 1 / 1;
+        }
+    }
+}
+
+.searchModal.active {
+    display: flex !important;
+}

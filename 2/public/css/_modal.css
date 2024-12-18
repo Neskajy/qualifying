@@ -1,0 +1,113 @@
+.basketModal {
+    background: white;
+    position: fixed;
+    display: none;
+    padding: 0px 30px;
+    width: 650px;
+    @media (max-width: 750px) {
+        width: 80vw;
+    }
+    z-index: 11;
+    height: 80vh;
+    border-radius: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)
+    translateY(-50%);
+    overflow-y: scroll;
+
+    .addedCards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .card {
+            position: relative;
+            display: grid;
+            grid-template-columns: 80px 35% 30px 50px;
+            align-items: center;
+            width: 100%;
+            background: #fcfcfc;
+
+            gap: 20px;
+            .image {
+                height: 100%;
+                max-width: 80px;
+                img {
+                    width: 100%;
+                }
+            }
+
+            .information {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .switchNumOfProducts {
+                width: fit-content;
+
+                input {
+                    width: fit-content;
+                    width: 40px;
+                    font-size: 20px;
+                    font-weight: 700;
+                    /* background: black; */
+                    /* color: white; */
+                }
+            }
+
+            .total {
+                /* position: absolute; */
+                right: 100px;
+                display: flex;
+                gap: 5px;
+
+                span {
+                    font-size: 18px;
+                }
+
+                .productTotal {
+                    font-weight: 700;
+                }
+            }
+
+            .btn.remove {
+                position: absolute;
+                right: 0;
+                cursor: pointer;
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    .results {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        bottom: 30px;
+        right: 30px;
+        align-items: flex-end;
+        gap: 15px;
+        .totalProducts {
+            display: flex;
+            gap: 5px;
+            span {
+                font-size: 18px;
+            }
+
+            .productTotal {
+                font-weight: 700;
+            }
+        }
+    
+        .buttons {
+            /* border-top: 1px solid black; */
+            display: flex;
+            gap: 10px;
+        }
+    }
+    &.active {
+        display: block;
+    }
+}
