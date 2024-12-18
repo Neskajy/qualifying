@@ -38,9 +38,6 @@ class Slider {
 
 
         this.sliderWrapper = this.galleryWidth - 40;
-
-        
-        console.log(this.slider.className);
         
         if (this.slider.className == "slider") {
             this.slidesPerView = 5;
